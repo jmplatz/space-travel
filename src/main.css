@@ -3,7 +3,7 @@
   --secondary-color: #783d53;
   --text: #f6f6f6;
   --background: #555;
-  --test: black;
+  --black: black;
 }
 
 * {
@@ -132,7 +132,7 @@ img {
 .section-footer {
   grid-row-start: 3;
   grid-row-end: 4;
-  background: var(--test);
+  background: var(--black);
   color: var(--text);
   padding: 1rem 0;
 }
