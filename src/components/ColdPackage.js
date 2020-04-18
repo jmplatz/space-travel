@@ -61,7 +61,7 @@ export class ColdPackage extends Component {
                 <Switch
                 onClick={handleChange('coldPackage')}
                 onChange={this.changePrice}
-                defaultValue={values.coldPackage}
+                checked={values.coldPackage}
               />
                 $20,000 add-on
               </DialogContentText>

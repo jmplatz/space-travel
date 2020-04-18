@@ -61,7 +61,7 @@ export class WindPackage extends Component {
                 <Switch
                 onClick={handleChange('windPackage')}
                 onChange={this.changePrice}
-                defaultValue={values.windPackage}
+                checked={values.windPackage}
               />
                 $8,000 add-on
               </DialogContentText>

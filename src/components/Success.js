@@ -21,6 +21,8 @@ export class Success extends Component {
   };
 
   render() {
+    const { values } = this.props;
+
     return (
       <React.Fragment>
         <Dialog
@@ -31,7 +33,21 @@ export class Success extends Component {
           <DialogContent>
             <DialogTitle>Thank You For Your Submission</DialogTitle>
             <br />
-            <DialogContentText>You will receive an email confirmation of your booking shortly</DialogContentText>
+            <DialogContentText>
+              You will receive an email confirmation of your booking shortly
+            </DialogContentText>
+            <DialogContentText>
+              Email: {values.email}
+            </DialogContentText>
+            <DialogContentText>
+              Day of Travel: {values.dayOfTravel}
+            </DialogContentText>
+            <DialogContentText>
+              Confirmation Number: {Math.floor((Math.random() * 1000000))}
+            </DialogContentText>
+            <DialogContentText>
+              Total: ${values.total}
+            </DialogContentText>
             <br />
             <Link to="/">
               <Button

@@ -44,32 +44,32 @@ export class Confirm extends Component {
         >
           <DialogContent>
             <DialogTitle>Confirm Your Booking</DialogTitle>
-            <DialogContentText>
-              <List>
-                <ListItem>
-                  <ListItemText primary="First Name" secondary={values.firstName} />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Last Name" secondary={values.lastName} />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Email" secondary={values.email} />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Day of Travel" secondary={values.dayOfTravel} />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Cold Package Selected" secondary={values.coldPackage ? 'Yes' : 'No'} />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Wind Package Selected" secondary={values.windPackage ? 'Yes' : 'No'} />
-                </ListItem>
-              </List>
-            </DialogContentText>
+            <List>
+              <ListItem>
+                <ListItemText primary="Last Name" secondary={values.lastName} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Email" secondary={values.email} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Day of Travel" secondary={values.dayOfTravel} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Cold Package Selected" secondary={values.coldPackage ? 'Yes, $20,000 added' : 'No'} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Wind Package Selected" secondary={values.windPackage ? 'Yes, $8000 added' : 'No'} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Base Package Price" secondary="$80,000" />
+              </ListItem>
+            </List>
             <DialogTitle>
-              Final Total is: ${values.total}     (${(values.runningTotal * (1 - values.discount)).toFixed(2)} in discounts)
-              </DialogTitle>
-            <br />
+              Final Total is: ${values.total}
+              <DialogContentText>
+                (${(values.runningTotal * (1 - values.discount)).toFixed(0)} in discounts applied)
+              </DialogContentText>
+            </DialogTitle>
             <Button
               color="secondary"
               variant="contained"
